@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Use Routes instead of Switch
 import Analytics from './components/Analytics';
 import AboutUs from './components/AboutUs';
 import Footer from './components/Footer';
@@ -14,12 +14,12 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/analytics" element={<Analytics />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/query" element={<Query />} />
-          <Route path="/about" element={<AboutUs />} />
+        <Routes> {/* Use Routes instead of Switch */}
+          <Route path="/" element={<Hero />} /> {/* Use the element prop */}
+          <Route path="/analytics" element={<Analytics />} /> {/* Use the element prop */}
+          <Route path="/news" element={<News />} /> {/* Use the element prop */}
+          <Route path="/query" element={<Query />} /> {/* Use the element prop */}
+          <Route path="/about" element={<AboutUs />} /> {/* Use the element prop */}
         </Routes>
         <Newsletter />
         <Footer />
