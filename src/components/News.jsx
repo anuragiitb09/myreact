@@ -23,7 +23,7 @@ const News = () => {
 
   return (
     <div className='w-full bg-white py-16 px-4'>
-      <h1 className='text-black text-3xl font-bold text-center pb-8'>Latest News</h1>
+      <h1 className='text-black text-4xl font-bold text-center pb-8'>Latest News</h1>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
         {newsData.map((news) => (
           <div key={news.url} className='flex flex-col justify-center items-center px-4 relative'>

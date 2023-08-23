@@ -1,63 +1,44 @@
 import React from 'react';
-import {
-  FaDribbbleSquare,
-  FaFacebookSquare,
-  FaGithubSquare,
-  FaInstagram,
-  FaTwitterSquare,
-} from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
-    <div className='max-w-[1240px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
-      <div>
-        <h1 className='w-full text-3xl font-bold text-[#00df9a]'>REACT.</h1>
-        <p className='py-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit ullam iste repellat consequatur libero reiciendis, blanditiis accusantium.</p>
-        <div className='flex justify-between md:w-[75%] my-6'>
-            <FaFacebookSquare size={30} />
-            <FaInstagram size={30} />
-            <FaTwitterSquare size={30} />
-            <FaGithubSquare size={30} />
-            <FaDribbbleSquare size={30} />
-        </div>
+    <div className='max-w-[1240px] mx-auto py-20 px-6 flex justify-between text-lg text-gray-300'>
+
+      {/* Contact and Social Media Links */}
+      <div className='flex flex-col w-1/3 mb-16'> {/* Increased bottom margin using mb-16 */}
+        <h1 className='w-full text-4xl font-bold text-[#00df9a] mb-8'>CA. Parth A. Doshi</h1>
+        <p className='py-6'>
+          Mobile: +91 9702260296<br />
+          Email: contact@padoshiassociates.com <br />
+          Address: 1302, Ashtha Heights, Jawahar Nagar, Goregaon West, Mumbai – 400104
+        </p>
+       
       </div>
-      <div className='lg:col-span-2 flex justify-between mt-6'>
-    <div>
-        <h6 className='font-medium text-gray-400'>Solutions</h6>
+
+      {/* Quick Links */}
+      <div className='flex flex-col w-1/3 mb-4'>
+        <h6 className='font-semibold text-xl text-gray-400'>Quick Links:</h6>
         <ul>
-            <li className='py-2 text-sm'>Analytics</li>
-            <li className='py-2 text-sm'>Marketing</li>
-            <li className='py-2 text-sm'>Commerce</li>
-            <li className='py-2 text-sm'>Insights</li>
+          <li className='py-2 text-lg'><a href="/">Home</a></li>
+          <li className='py-2 text-lg'><Link to="/about">About Us</Link></li>
+          <li className='py-2 text-lg'><Link to="/Service">Services</Link></li>
+          <li className='py-2 text-lg'><Link to="/queries">Queries</Link></li>
+          <li className='py-2 text-lg'><Link to="/ContactUS">Contact Us</Link></li>
         </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Support</h6>
+      </div>
+
+      {/* Services */}
+      <div className='flex flex-col w-1/3 mt-0'>
+        <h6 className='font-semibold text-xl text-gray-400'>Services:</h6>
         <ul>
-            <li className='py-2 text-sm'>Pricing</li>
-            <li className='py-2 text-sm'>Documentation</li>
-            <li className='py-2 text-sm'>Guides</li>
-            <li className='py-2 text-sm'>API Status</li>
+        <li className='py-2 text-lg'><Link to="/income">Income Tax</Link></li>   
+        <li className='py-2 text-lg'><Link to="/indirect">Indirect Tax</Link></li>    
+        <li className='py-2 text-lg'><Link to="/other">Other Services</Link></li>
+        <li className='py-2 text-lg'><Link to="/accounting-auditing">Accounting and Auditing</Link></li>
+      
         </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Company</h6>
-        <ul>
-            <li className='py-2 text-sm'>About</li>
-            <li className='py-2 text-sm'>Blog</li>
-            <li className='py-2 text-sm'>Jobs</li>
-            <li className='py-2 text-sm'>Press</li>
-            <li className='py-2 text-sm'>Careers</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Legal</h6>
-        <ul>
-            <li className='py-2 text-sm'>Claim</li>
-            <li className='py-2 text-sm'>Policy</li>
-            <li className='py-2 text-sm'>Terms</li>
-        </ul>
-    </div>
       </div>
     </div>
   );
